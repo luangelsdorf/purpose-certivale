@@ -1462,6 +1462,7 @@ var TextareaAutosize = (function () {
 
 if ($('[data-toggle="widget-calendar"]')[0]) {
 	$('[data-toggle="widget-calendar"]').fullCalendar({
+		locale: 'pt-br',
 		contentHeight: 'auto',
 		theme: false,
 		buttonIcons: {
