@@ -19,10 +19,7 @@
   <script type="module" async>
     const sidenavReq = await fetch('/components/sidenav.html');
     const sidenav = await sidenavReq.text();
-
     document.querySelector('.main-content').insertAdjacentHTML('beforebegin', sidenav);
-    window.addEventListener('DOMContentLoaded', () => {
-    });
   </script>
 </head>
 
