@@ -54,6 +54,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "latest",
     "@fortawesome/fontawesome-free": "latest",
+    "@material/web": "^1.3.0",
     "animate.css": "latest",
     "apexcharts": "latest",
     "autosize": "latest",

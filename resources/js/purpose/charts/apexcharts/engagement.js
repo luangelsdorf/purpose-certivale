@@ -9,10 +9,11 @@ var EngagementChart = (function() {
 	// Variables
 
 	var $chart = $('#apex-engagement');
-
+	
 	// Methods
 	function init($this) {
-
+		
+		console.log('asda');
 		// Options
 		var options = {
 			chart: {

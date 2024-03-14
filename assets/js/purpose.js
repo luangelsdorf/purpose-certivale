@@ -1462,7 +1462,7 @@ var TextareaAutosize = (function () {
 
 if ($('[data-toggle="widget-calendar"]')[0]) {
 	$('[data-toggle="widget-calendar"]').fullCalendar({
-		locale: 'pt-br',
+		locale: 'pt',
 		contentHeight: 'auto',
 		theme: false,
 		buttonIcons: {
@@ -1956,6 +1956,7 @@ var Fullcalendar = (function () {
 			// For more options read the official docs: https://fullcalendar.io/docs
 
 			options = {
+				locale: 'pt-br',
 				header: {
 					right: '',
 					center: '',
@@ -3159,6 +3160,70 @@ var EngagementChart = (function () {
 		// Options
 		var options = {
 			chart: {
+				locales: [{
+					"name": "pt-br",
+					"options": {
+						"months": [
+							"Janeiro",
+							"Fevereiro",
+							"Março",
+							"Abril",
+							"Maio",
+							"Junho",
+							"Julho",
+							"Agosto",
+							"Setembro",
+							"Outubro",
+							"Novembro",
+							"Dezembro"
+						],
+						"shortMonths": [
+							"Jan",
+							"Fev",
+							"Mar",
+							"Abr",
+							"Mai",
+							"Jun",
+							"Jul",
+							"Ago",
+							"Set",
+							"Out",
+							"Nov",
+							"Dez"
+						],
+						"days": [
+							"Domingo",
+							"Segunda",
+							"Terça",
+							"Quarta",
+							"Quinta",
+							"Sexta",
+							"Sábado"
+						],
+						"shortDays": [
+							"Dom",
+							"Seg",
+							"Ter",
+							"Qua",
+							"Qui",
+							"Sex",
+							"Sab"
+						],
+						"toolbar": {
+							"exportToSVG": "Baixar SVG",
+							"exportToPNG": "Baixar PNG",
+							"exportToCSV": "Baixar CSV",
+							"menu": "Menu",
+							"selection": "Selecionar",
+							"selectionZoom": "Selecionar Zoom",
+							"zoomIn": "Aumentar",
+							"zoomOut": "Diminuir",
+							"pan": "Navegação",
+							"reset": "Reiniciar Zoom"
+						}
+					}
+				}],
+				defaultLocale: 'pt-br',
 				width: '100%',
 				zoom: {
 					enabled: false
@@ -3175,12 +3240,13 @@ var EngagementChart = (function () {
 				curve: 'smooth'
 			},
 			series: [{
-				name: 'Likes',
-				data: [4, 3, 10, 9, 29, 19, 22, 9]
+				name: 'Vendas',
+				data: [4, 3, 10, 9, 29, 19, 22]
 			}],
 			xaxis: {
 				labels: {
-					format: 'MMM',
+					offsetX: -64,
+					format: 'ddd',
 					style: {
 						colors: PurposeStyle.colors.gray[600],
 						fontSize: '14px',
@@ -3196,11 +3262,11 @@ var EngagementChart = (function () {
 					borderType: 'solid',
 					color: PurposeStyle.colors.gray[300],
 					height: 6,
-					offsetX: 0,
+					offsetX: -64,
 					offsetY: 0
 				},
 				type: 'datetime',
-				categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000'],
+				categories: ['3/10/2024', '3/11/2024', '3/12/2024', '3/13/2024', '3/14/2024', '3/15/2024', '3/16/2024', '3/17/2024'],
 			},
 			yaxis: {
 				labels: {
@@ -3297,10 +3363,75 @@ var LineChart = (function () {
 
 	// Methods
 	function init($this) {
+		console.log('asda');
 
 		// Options
 		var options = {
 			chart: {
+				locales: [{
+					"name": "pt-br",
+					"options": {
+						"months": [
+							"Janeiro",
+							"Fevereiro",
+							"Março",
+							"Abril",
+							"Maio",
+							"Junho",
+							"Julho",
+							"Agosto",
+							"Setembro",
+							"Outubro",
+							"Novembro",
+							"Dezembro"
+						],
+						"shortMonths": [
+							"Jan",
+							"Fev",
+							"Mar",
+							"Abr",
+							"Mai",
+							"Jun",
+							"Jul",
+							"Ago",
+							"Set",
+							"Out",
+							"Nov",
+							"Dez"
+						],
+						"days": [
+							"Domingo",
+							"Segunda",
+							"Terça",
+							"Quarta",
+							"Quinta",
+							"Sexta",
+							"Sábado"
+						],
+						"shortDays": [
+							"Dom",
+							"Seg",
+							"Ter",
+							"Qua",
+							"Qui",
+							"Sex",
+							"Sab"
+						],
+						"toolbar": {
+							"exportToSVG": "Baixar SVG",
+							"exportToPNG": "Baixar PNG",
+							"exportToCSV": "Baixar CSV",
+							"menu": "Menu",
+							"selection": "Selecionar",
+							"selectionZoom": "Selecionar Zoom",
+							"zoomIn": "Aumentar",
+							"zoomOut": "Diminuir",
+							"pan": "Navegação",
+							"reset": "Reiniciar Zoom"
+						}
+					}
+				}],
+				defaultLocale: 'pt-br',
 				zoom: {
 					enabled: false
 				},

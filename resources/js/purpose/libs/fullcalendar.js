@@ -96,6 +96,7 @@ var Fullcalendar = (function() {
 		// For more options read the official docs: https://fullcalendar.io/docs
 
 		options = {
+			locale: 'pt',
 			header: {
 				right: '',
 				center: '',
