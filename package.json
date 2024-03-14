@@ -7,10 +7,13 @@
   "keywords": [],
   "author": "AUTHOR_NAME",
   "license": "ISC",
+  "browser": {
+    "laravel-mix": false
+  },
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress",
     "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
@@ -39,13 +42,14 @@
     "gulp-uglify": "latest",
     "gulp-wait": "latest",
     "js-yaml": "latest",
-    "laravel-mix": "^6.0.19",
+    "laravel-mix": "latest",
     "popper.js": "latest",
     "postcss-flexbugs-fixes": "latest",
     "pump": "latest",
     "sass": "latest",
     "sass-loader": "latest",
-    "vue-template-compiler": "latest"
+    "vue-template-compiler": "latest",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "@fancyapps/fancybox": "latest",
