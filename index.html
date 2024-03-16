@@ -25,6 +25,8 @@
       document.querySelector('form').addEventListener('submit', handleSubmit);
     })
   </script>
+
+  <script type="module" src="/assets/libs/material/bundle.js"></script>
 </head>
 
 <body class="application application-offset">
@@ -47,37 +49,14 @@
                     <span class="clearfix"></span>
                     <form role="form" onsubmit="handleSubmit">
                       <div class="form-group">
-                        <label class="form-control-label">Nome de Usuário</label>
-                        <div class="input-group input-group-merge">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                          </div>
-                          <input type="text" class="form-control" id="input-email">
-                        </div>
+                        <md-outlined-text-field label="Nome de Usuário" class="w-100" />
                       </div>
                       <div class="form-group mb-4">
-                        <div class="d-flex align-items-center justify-content-between">
-                          <div>
-                            <label class="form-control-label">Senha</label>
-                          </div>
-                        </div>
-                        <div class="input-group input-group-merge">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                          </div>
-                          <input type="password" class="form-control" id="input-password">
-                          <div class="input-group-append">
-                            <span class="input-group-text">
-                              <a href="#" data-toggle="password-text" data-target="#input-password">
-                                <i class="fas fa-eye"></i>
-                              </a>
-                            </span>
-                          </div>
-                        </div>
+                        <md-outlined-text-field label="Senha" class="w-100" />
                       </div>
                       <div class="mt-4">
                         <button type="submit" class="btn btn-sm btn-primary btn-icon rounded-pill">
-                          <span class="btn-inner--text">Sign in</span>
+                          <span class="btn-inner--text">Entrar</span>
                           <span class="btn-inner--icon"><i class="fas fa-long-arrow-alt-right"></i></span>
                         </button>
                       </div>

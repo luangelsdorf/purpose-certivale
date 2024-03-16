@@ -24062,6 +24062,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   margin-right: 10px;
 }
 
+:root {
+  --md-sys-color-primary: var(--sky-blue);
+  --md-outlined-text-field-label-text-font: REM, sans-serif;
+  --md-outlined-text-field-input-text-font: REM, sans-serif;
+  --md-outlined-text-field-input-text-font: REM, sans-serif;
+}
+
 .btn {
   font-weight: 400;
 }

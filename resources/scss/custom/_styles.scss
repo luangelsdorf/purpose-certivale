@@ -3,6 +3,14 @@
 // This is the place where you should place all additional styles and imports.
 // This will allow you to take advantage of future updates with lower time consumed on the upgrade process.
 
+:root {
+  --md-sys-color-primary: var(--sky-blue);
+
+  --md-outlined-text-field-label-text-font: REM, sans-serif;
+  --md-outlined-text-field-input-text-font: REM, sans-serif;
+  --md-outlined-text-field-input-text-font: REM, sans-serif;
+}
+
 .btn {
   font-weight: 400;
 }
