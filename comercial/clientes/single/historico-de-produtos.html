@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="Purpose Application UI is the following chapter we've finished in order to create a complete and robust solution next to the already known Purpose Website UI.">
+  <meta name="author" content="Webpixels">
+  <title>Purpose - Application UI Kit</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="/assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Page CSS -->
+  <link rel="stylesheet" href="/assets/libs/fullcalendar/dist/fullcalendar.min.css">
+  <!-- Purpose CSS -->
+  <link rel="stylesheet" href="/assets/css/purpose.css" id="stylesheet">
+
+  <script async src="/assets/js/init.js"></script>
+</head>
+
+<body class="application application-offset">
+  <div class="container-fluid container-application">
+    <div class="main-content position-relative">
+      <div class="page-content">
+        <!-- Page title -->
+        <div class="page-title">
+          <div class="row justify-content-between align-items-center">
+            <div
+              class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+              <!-- Page title + Go Back button -->
+              <div class="d-inline-block">
+                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Histórico de Produtos</h5>
+              </div>
+              <!-- Additional info -->
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
+              <a href="#" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4">
+                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 order-lg-2">
+            <div class="card">
+              <div class="list-group list-group-flush">
+                <div class="list-group-item">
+                  <div class="media">
+                    <i class="fas fa-user"></i>
+                    <div class="media-body ml-3">
+                      <a href="/comercial/clientes/single/" class="stretched-link h6 mb-1">Pessoa Física</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="media">
+                    <i class="fas fa-building"></i>
+                    <div class="media-body ml-3">
+                      <a href="/comercial/clientes/single/pessoa-juridica.html" class="stretched-link h6 mb-1">Pessoa
+                        Jurídica</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="media">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="media-body ml-3">
+                      <a href="/comercial/clientes/single/historico-de-produtos.html"
+                        class="stretched-link h6 mb-1">Histórico de Produtos</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="media">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="media-body ml-3">
+                      <a href="/comercial/clientes/single/historico-de-atendimento.html"
+                        class="stretched-link h6 mb-1">Histórico de Atendimento</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="media">
+                    <i class="fas fa-bell"></i>
+                    <div class="media-body ml-3">
+                      <a href="/comercial/clientes/single/controle-de-notificacoes.html"
+                        class="stretched-link h6 mb-1">Controle de Notificações</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 order-lg-1">
+            <!-- Change avatar -->
+            <div class="card bg-gradient-primary hover-shadow-lg border-0">
+              <div class="card-body py-3">
+                <div class="row row-grid align-items-center">
+                  <div class="col-lg-8">
+                    <div class="media align-items-center">
+                      <h5 class="text-white mb-0">Amanda Rios</h5>
+                    </div>
+                  </div>
+                  <div class="col-auto flex-fill mt-4 mt-sm-0 text-sm-right d-none d-lg-block">
+                    <a href="#" class="btn btn-sm btn-white rounded-pill btn-icon shadow">
+                      <span class="btn-inner--icon"><i class="fab fa-whatsapp"></i></span>
+                      <span class="btn-inner--text">WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Listing -->
+            <div class="card">
+              <!-- Card header -->
+              <div class="card-header actions-toolbar border-0">
+                <div class="row justify-content-between align-items-center">
+                  <div class="col">
+                    <h6 class="d-inline-block mb-0">Histórico de Produtos</h6>
+                  </div>
+                </div>
+              </div>
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table align-items-center">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nome do Produto</th>
+                      <th scope="col">Status do Produto</th>
+                      <th scope="col">Status do Pagamento</th>
+                      <th scope="col">Vencimento</th>
+                      <th scope="col">Protocolo</th>
+                      <th scope="col">Valor</th>
+                      <th scope="col">Parceiro Indicador</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex flex-column">
+                          <a href="#" class="name h6 mb-0 text-sm">e-CPF A1</a>
+                          <small class="d-block font-weight-bold">#85e3fa</small>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="badge badge-sm rounded-pill badge-danger">Inativo</div>
+                      </td>
+                      <td>
+                        <div class="badge badge-sm rounded-pill badge-warning">Aguardando Aprovação</div>
+                      </td>
+                      <td>
+                        25/02/2024
+                      </td>
+                      <td>
+                        1002549827
+                      </td>
+                      <td>
+                        R$150,00
+                      </td>
+                      <td>
+                        Otávio Gomes
+                      </td>
+                      <td class="text-right">
+                        <!-- Actions -->
+                        <div class="actions ml-3">
+                          <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Copiar protocolo">
+                            <i class="fas fa-copy"></i>
+                          </a>
+                          <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Baixar nota fiscal">
+                            <i class="fas fa-download"></i>
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex flex-column">
+                          <a href="#" class="name h6 mb-0 text-sm">e-CPF A1</a>
+                          <small class="d-block font-weight-bold">#85e3fa</small>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="badge badge-sm rounded-pill badge-danger">Inativo</div>
+                      </td>
+                      <td>
+                        <div class="badge badge-sm rounded-pill badge-warning">Aguardando Aprovação</div>
+                      </td>
+                      <td>
+                        25/02/2024
+                      </td>
+                      <td>
+                        1002549827
+                      </td>
+                      <td>
+                        R$150,00
+                      </td>
+                      <td>
+                        Otávio Gomes
+                      </td>
+                      <td class="text-right">
+                        <!-- Actions -->
+                        <div class="actions ml-3">
+                          <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Copiar protocolo">
+                            <i class="fas fa-copy"></i>
+                          </a>
+                          <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Baixar nota fiscal">
+                            <i class="fas fa-download"></i>
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex flex-column">
+                          <a href="#" class="name h6 mb-0 text-sm">e-CPF A1</a>
+                          <small class="d-block font-weight-bold">#85e3fa</small>
+                        </div>
+                      </th>
+                      <td>
+                        <div class="badge badge-sm rounded-pill badge-danger">Inativo</div>
+                      </td>
+                      <td>
+                        <div class="badge badge-sm rounded-pill badge-warning">Aguardando Aprovação</div>
+                      </td>
+                      <td>
+                        25/02/2024
+                      </td>
+                      <td>
+                        1002549827
+                      </td>
+                      <td>
+                        R$150,00
+                      </td>
+                      <td>
+                        Otávio Gomes
+                      </td>
+                      <td class="text-right">
+                        <!-- Actions -->
+                        <div class="actions ml-3">
+                          <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Copiar protocolo">
+                            <i class="fas fa-copy"></i>
+                          </a>
+                          <a href="#" class="action-item mr-2" data-toggle="tooltip" title="Baixar nota fiscal">
+                            <i class="fas fa-download"></i>
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="/assets/js/purpose.core.js"></script>
+  <!-- Page JS -->
+  <script src="/assets/libs/progressbar.js/dist/progressbar.min.js"></script>
+  <script src="/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="/assets/libs/moment/min/moment.min.js"></script>
+  <script src="/assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
+  <!-- Purpose JS -->
+  <script src="/assets/js/purpose.js"></script>
+</body>
+
+</html>
