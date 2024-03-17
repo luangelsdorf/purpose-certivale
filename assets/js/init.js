@@ -10,4 +10,8 @@ window.addEventListener('DOMContentLoaded', async () => {
   const navbarReq = await fetch('/components/navbar.html');
   const navbar = await navbarReq.text();
   document.querySelector('.page-content').insertAdjacentHTML('beforebegin', navbar);
+
+  const searchReq = await fetch('/components/search.html');
+  const search = await searchReq.text();
+  document.querySelector('.page-content').insertAdjacentHTML('beforebegin', search);
 })
