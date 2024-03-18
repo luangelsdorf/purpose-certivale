@@ -24083,7 +24083,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   --md-sys-color-primary: var(--sky-blue);
   --md-outlined-text-field-label-text-font: REM, sans-serif;
   --md-outlined-text-field-input-text-font: REM, sans-serif;
-  --md-outlined-text-field-background-color: red;
+  --md-disabled-input-text-color: red;
+  --md-disabled-input-text-opacity: 1;
+  --md-disabled-label-text-color: red;
+  --md-disabled-label-text-opacity: 1;
+  --md-disabled-leading-icon-color: red;
+  --md-disabled-leading-icon-opacity: 1;
+  --md-disabled-outline-color: red;
+  --md-outlined-field-outline-color: red;
 }
 
 md-outlined-text-field {

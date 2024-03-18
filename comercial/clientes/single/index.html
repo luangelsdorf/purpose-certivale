@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/assets/css/purpose.css" id="stylesheet">
 
   <script async src="/assets/js/init.js"></script>
+  <script type="module" src="/assets/libs/material/bundle.js"></script>
 </head>
 
 <body class="application application-offset">
@@ -54,7 +55,8 @@
                   <div class="media">
                     <i class="fas fa-building"></i>
                     <div class="media-body ml-3">
-                      <a href="/comercial/clientes/single/pessoa-juridica.html" class="stretched-link h6 mb-1">Pessoa Jurídica</a>
+                      <a href="/comercial/clientes/single/pessoa-juridica.html" class="stretched-link h6 mb-1">Pessoa
+                        Jurídica</a>
                     </div>
                   </div>
                 </div>
@@ -62,7 +64,8 @@
                   <div class="media">
                     <i class="fas fa-shopping-cart"></i>
                     <div class="media-body ml-3">
-                      <a href="/comercial/clientes/single/historico-de-produtos.html" class="stretched-link h6 mb-1">Histórico de Produtos</a>
+                      <a href="/comercial/clientes/single/historico-de-produtos.html"
+                        class="stretched-link h6 mb-1">Histórico de Produtos</a>
                     </div>
                   </div>
                 </div>
@@ -70,7 +73,8 @@
                   <div class="media">
                     <i class="fas fa-calendar-check"></i>
                     <div class="media-body ml-3">
-                      <a href="/comercial/clientes/single/historico-de-atendimento.html" class="stretched-link h6 mb-1">Histórico de Atendimento</a>
+                      <a href="/comercial/clientes/single/historico-de-atendimento.html"
+                        class="stretched-link h6 mb-1">Histórico de Atendimento</a>
                     </div>
                   </div>
                 </div>
@@ -78,7 +82,8 @@
                   <div class="media">
                     <i class="fas fa-bell"></i>
                     <div class="media-body ml-3">
-                      <a href="/comercial/clientes/single/controle-de-notificacoes.html" class="stretched-link h6 mb-1">Controle de Notificações</a>
+                      <a href="/comercial/clientes/single/controle-de-notificacoes.html"
+                        class="stretched-link h6 mb-1">Controle de Notificações</a>
                     </div>
                   </div>
                 </div>
@@ -109,113 +114,77 @@
                 <form>
                   <!-- General information -->
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col">
                       <div class="form-group">
-                        <label class="form-control-label">First name</label>
-                        <input class="form-control" type="text" placeholder="Enter your first name">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="form-control-label">Last name</label>
-                        <input class="form-control" type="text" placeholder="Also your last name">
+                        <md-outlined-text-field disabled class="w-100" value="Amanda Rios dos Santos"
+                          label="Nome do Titular" />
                       </div>
                     </div>
                   </div>
                   <div class="row align-items-center">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="form-control-label">Birthday</label>
-                        <input type="text" class="form-control" data-toggle="date" placeholder="Select your birth date">
+                        <md-outlined-text-field disabled class="w-100" value="512.895.210-60" label="CPF" />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="form-control-label">Gender</label>
-                        <select class="form-control" data-toggle="select">
-                          <option value="1">Female</option>
-                          <option value="2">Male</option>
-                          <option value="2">Rather not say</option>
-                        </select>
+                        <md-outlined-text-field disabled class="w-100" value="04/12/1994" label="Data de Nascimento" />
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="form-control-label">Email</label>
-                        <input class="form-control" type="email" placeholder="name@exmaple.com">
-                        <small class="form-text text-muted mt-2">This is the main email address that we'll send
-                          notifications.</small>
+                        <md-outlined-text-field class="w-100" value="(51) 99568-2571" label="Telefone" />
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="form-control-label">Phone</label>
-                        <input class="form-control" type="text" placeholder="+40-777 245 549">
+                        <md-outlined-text-field class="w-100" value="amandarios21@gmail.com" label="E-mail" />
                       </div>
                     </div>
                   </div>
+
                   <hr />
                   <!-- Address -->
+
                   <div class="row">
                     <div class="col">
                       <div class="form-group">
-                        <label class="form-control-label">Address</label>
-                        <input class="form-control" type="text" placeholder="Enter your home address">
+                        <md-outlined-text-field class="w-100" value="Rua Espanha" label="Logradouro" />
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="form-control-label">City</label>
-                        <input class="form-control" type="text" placeholder="City">
+                        <md-outlined-text-field class="w-100" value="870" type="number" label="Número" />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="form-control-label">Country</label>
-                        <select class="form-control" data-toggle="select" title="Country" data-live-search="true"
-                          data-live-search-placeholder="Country">
-                          <option>Romania</option>
-                          <option>United Stated</option>
-                          <option>France</option>
-                          <option>Greece</option>
-                          <option>Italy</option>
-                          <option>Norway</option>
-                        </select>
+                        <md-outlined-text-field class="w-100" value="Vitória" label="Bairro" />
                       </div>
                     </div>
                   </div>
-                  <hr />
-                  <!-- Description -->
                   <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                       <div class="form-group">
-                        <div class="form-group">
-                          <label class="form-control-label">Bio</label>
-                          <textarea class="form-control" placeholder="Tell us a few words about yourself"
-                            rows="3"></textarea>
-                          <small class="form-text text-muted mt-2">You can @mention other users and organizations to
-                            link to them.</small>
-                        </div>
+                        <md-outlined-text-field class="w-100" value="Rio Branco" label="Cidade" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <md-outlined-text-field class="w-100" value="Acre" label="Estado" />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <md-outlined-text-field class="w-100" value="69901-827" label="CEP" />
                       </div>
                     </div>
                   </div>
-                  <div class="row mt-4">
-                    <div class="col">
-                      <div class="form-group">
-                        <label class="form-control-label mb-3">Skills</label>
-                        <input type="text" class="form-control" value="HTML, CSS3, Bootstrap, Photoshop, VueJS"
-                          data-toggle="tags" placeholder="Type here..." />
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <!-- Save changes buttons -->
                   <button type="button" class="btn btn-sm btn-primary rounded-pill">Salvar Mudanças</button>
                   <button type="button" class="btn btn-link text-muted">Cancelar</button>
                 </form>
