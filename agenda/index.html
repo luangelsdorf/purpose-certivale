@@ -503,6 +503,17 @@
       enableTime: false,
       dateFormat: "Y-m-d H:i",
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const action = new URLSearchParams(window.location.search).get('action');
+      if (action === 'create') {
+        $('#new-event').modal('show');
+      }
+
+      else if (action === 'close') {
+        $('#close-date').modal('show');
+      }
+    });
   </script>
 </body>
 

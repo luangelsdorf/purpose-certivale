@@ -2026,6 +2026,13 @@ var Fullcalendar = (function () {
 
 		// Initalize the calendar plugin
 		$this.fullCalendar(options);
+		
+		document.addEventListener('DOMContentLoaded', () => {
+      const action = new URLSearchParams(window.location.search).get('action');
+      if (action === 'close') {
+        $this.fullCalendar('changeView', 'listWeek');
+      }
+    });
 
 
 		//
