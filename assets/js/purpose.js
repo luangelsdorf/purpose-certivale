@@ -1881,73 +1881,73 @@ var Fullcalendar = (function () {
 
 		var events = [{
 			id: 1,
-			title: "Call with Dave",
-			start: "2019-04-18",
-			allDay: !0,
-			className: "bg-danger",
+			title: "Allana e Márcia Entulhos ME",
+			start: "2024-03-18T09:00",
+			end: "2024-03-18T09:20",
+			className: "bg-soft-danger text-danger",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
 			id: 2,
-			title: "Lunch meeting",
-			start: "2019-04-21",
-			allDay: !0,
-			className: "bg-warning",
+			title: "Juan e Carolina Pães e Doces Ltda",
+			start: "2024-03-21T10:20",
+			end: "2024-03-21T10:40",
+			className: "bg-soft-warning text-warning",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
 			id: 3,
-			title: "All day conference",
-			start: "2019-04-29",
-			allDay: !0,
-			className: "bg-success",
+			title: "Tomás e Nathan Alimentos Ltda",
+			start: "2024-03-29T13:00",
+			end: "2024-03-29T13:20",
+			className: "bg-soft-success text-success",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
 			id: 4,
-			title: "Meeting with Mary",
-			start: "2019-05-01",
-			allDay: !0,
-			className: "bg-info",
+			title: "Felipe Benjamin Lorenzo",
+			start: "2024-03-01T13:00",
+			end: "2024-03-01T13:20",
+			className: "bg-soft-info text-info",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
 			id: 5,
-			title: "Winter Hackaton",
-			start: "2019-05-03",
-			allDay: !0,
-			className: "bg-danger",
+			title: "Ruan Leandro Assunção",
+			start: "2024-03-03T16:40",
+			end: "2024-03-03T17:00",
+			className: "bg-soft-danger text-danger",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
 			id: 6,
-			title: "Digital event",
-			start: "2019-05-07",
-			allDay: !0,
-			className: "bg-warning",
+			title: "Débora e Raimundo Restaurante ME",
+			start: "2024-03-07T11:00",
+			end: "2024-03-07T11:20",
+			className: "bg-soft-warning text-warning",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
 			id: 7,
-			title: "Marketing event",
-			start: "2019-05-10",
-			allDay: !0,
-			className: "bg-primary",
+			title: "Evelyn e Carlos Eduardo Buffet Ltda",
+			start: "2024-03-10T09:00",
+			end: "2024-03-10T09:20",
+			className: "bg-soft-primary text-primary",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
 			id: 8,
-			title: "Dinner with Family",
-			start: "2019-05-19",
-			allDay: !0,
-			className: "bg-danger",
+			title: "Alana Freitas",
+			start: "2024-03-19T15:20",
+			end: "2024-03-19T15:40",
+			className: "bg-soft-danger text-danger",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
 			id: 9,
-			title: "Black Friday",
-			start: "2019-05-23",
-			allDay: !0,
-			className: "bg-info",
+			title: "Isabela e Eduardo Adega Eireli",
+			start: "2024-03-23T10:00",
+			end: "2024-03-23T10:20",
+			className: "bg-soft-info text-info",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
 			id: 10,
-			title: "Cyber Week",
-			start: "2019-05-02",
-			allDay: !0,
-			className: "bg-yellow",
+			title: "Joaquim Thiago",
+			start: "2024-03-02T14:00",
+			end: "2024-03-02T14:20",
+			className: "bg-soft-yellow text-yellow",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}],
 
@@ -1957,6 +1957,23 @@ var Fullcalendar = (function () {
 
 			options = {
 				locale: 'pt-br',
+				weekends: false,
+				eventOverlap: false,
+				allDaySlot: false,
+				slotEventOverlap: false,
+				stickyHeaderDates: false,
+				displayEventTime: false,
+				headerToolbar: false,
+				nowIndicator: false,
+				slotLabelInterval: "01:00:00",
+				slotDuration: "00:20:00",
+				minTime: "08:00:00",
+				maxTime: "18:00:00",
+				businessHours: {
+					dow: [1, 2, 3, 4, 5],
+					start: '07:00',
+					end: '19:00',
+				},
 				header: {
 					right: '',
 					center: '',
@@ -1988,13 +2005,18 @@ var Fullcalendar = (function () {
 					// $this.find('.fc-toolbar').attr('data-calendar-month', calendarMonth);
 
 					//Set title in page header
+					if (view.name === 'listWeek') {
+						document.querySelector('#close-date-btn').style.display = 'inline-block';
+					} else {
+						document.querySelector('#close-date-btn').style.display = 'none';
+					}
 					$('.fullcalendar-title').html(view.title);
 				},
 
 				// Edit calendar event action
 
 				eventClick: function (event, element) {
-					$('#edit-event input[value=' + event.className + ']').prop('checked', true);
+					/* $('#edit-event input[value=' + event.className + ']').prop('checked', true); */
 					$('#edit-event').modal('show');
 					$('.edit-event--id').val(event.id);
 					$('.edit-event--title').val(event.title);
@@ -2140,6 +2162,10 @@ var Fullcalendar = (function () {
 			e.preventDefault();
 			$this.fullCalendar('prev');
 		});
+
+		$('#close-date-btn').on('click', () => {
+			$('#close-date').modal('show');
+		})
 	}
 
 

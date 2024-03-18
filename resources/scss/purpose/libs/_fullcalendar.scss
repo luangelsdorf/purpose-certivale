@@ -10,6 +10,23 @@
   height: auto !important;
 }
 
+.fc-event-dot {
+  background-color: $sky-blue;
+}
+
+.fc-list-empty-wrap2 {
+  position: relative;
+  padding: 32px 16px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fc-unthemed .fc-list-empty {
+  background-color: transparent;
+}
+
 .fc {
   th {
     padding: $table-head-spacer-y $table-head-spacer-x;
@@ -50,7 +67,7 @@
   .fc-title {
     padding: 0.4rem 0.5rem;
     display: block;
-    color: $white;
+    color: inherit;
     @include text-truncate();
     font-weight: $font-weight-bold;
   }
