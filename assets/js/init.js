@@ -14,4 +14,11 @@ window.addEventListener('DOMContentLoaded', async () => {
   const searchReq = await fetch('/components/search.html');
   const search = await searchReq.text();
   document.querySelector('.page-content').insertAdjacentHTML('beforebegin', search);
-})
+
+  const activeModule = window.location.pathname.split('/')[1];
+  const sidenavOptions = document.querySelectorAll('[data-slug]');
+  sidenavOptions.forEach(el => {
+    el.classList.remove('active');
+    if (el.dataset.slug === activeModule) el.classList.add('active');
+  });
+});
