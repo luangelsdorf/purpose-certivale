@@ -9,6 +9,26 @@
   --md-outlined-text-field-input-text-font: REM, sans-serif;
 }
 
+.application {
+  .sidenav {
+    .nav-application {
+      margin-top: 56px;
+    }
+  }
+  .sidenav-user {
+    height: auto;
+    gap: 48px;
+  }
+}
+
+.application-offset {
+  .container-application {
+    &::before {
+      height: 390px;
+    }
+  }
+}
+
 md-outlined-text-field {
   background-color: #EFF2F7;
   color: #8492A6;

@@ -24085,6 +24085,18 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   --md-outlined-text-field-input-text-font: REM, sans-serif;
 }
 
+.application .sidenav .nav-application {
+  margin-top: 56px;
+}
+.application .sidenav-user {
+  height: auto;
+  gap: 48px;
+}
+
+.application-offset .container-application::before {
+  height: 390px;
+}
+
 md-outlined-text-field {
   background-color: #EFF2F7;
   color: #8492A6;
