@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/assets/libs/flatpickr/dist/flatpickr.min.css" id="stylesheet">
 
   <script async src="/assets/js/init.js"></script>
+  <script type="module" src="/assets/libs/material/bundle.js"></script>
 </head>
 
 <body class="application application-offset">
@@ -36,9 +37,10 @@
               <!-- Additional info -->
             </div>
             <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
-              <a href="#" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4">
+              <button data-toggle="modal" data-target="#new-subsidiary"
+                class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4">
                 <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -117,14 +119,14 @@
                   </td>
                   <td>
                     <div class="actions ml-3">
-                      <button href="#" class="action-item mr-2" data-toggle="tooltip"
+                      <button  class="action-item mr-2" data-toggle="modal" data-target="#hours"
                         data-original-title="Gerenciar Horários">
                         <i class="fas fa-clock"></i>
                       </button>
-                      <button href="#" class="action-item mr-2" data-toggle="tooltip" data-original-title="Editar">
+                      <button  class="action-item mr-2" data-toggle="modal" data-target="#edit-subsidiary" data-original-title="Editar">
                         <i class="fas fa-edit"></i>
                       </button>
-                      <button href="#" class="action-item mr-2" data-toggle="tooltip" data-original-title="Excluir">
+                      <button  class="action-item mr-2" data-toggle="modal" data-target="#delete-subsidiary" data-original-title="Excluir">
                         <i class="fas fa-trash text-danger"></i>
                       </button>
                     </div>
@@ -201,10 +203,320 @@
   </div>
 
   <!-- Modal Add -->
+  <div class="modal fade" id="new-subsidiary" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Nova Filial</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form class="edit-event--form">
+            <div class="row" style="row-gap: 24px;">
+              <div class="col-lg-6">
+                <md-outlined-text-field class="w-100" label="Nome" />
+              </div>
+              <div class="col-lg-6">
+                <md-outlined-text-field class="w-100" label="CNPJ" />
+              </div>
+              <div class="col-lg-12">
+                <select name="E-mail" id="email" class="custom-select">
+                  <option value="">E-mail</option>
+                  <option selected value="1">contato@certivale.com.br</option>
+                </select>
+              </div>
+
+              <hr class="my-3" style="flex-basis: 100%;" />
+
+              <div class="col-lg-12">
+                <md-outlined-text-field class="w-100" label="Logradouro" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" type="number" label="Número" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" label="Bairro" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" label="Cidade" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" label="Estado" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" label="CEP" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" label="Ponto de Referência" />
+              </div>
+
+            </div>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Modal Edit -->
+  <div class="modal fade" id="edit-subsidiary" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Editar Filial</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form class="edit-event--form">
+            <div class="row" style="row-gap: 24px;">
+              <div class="col-lg-6">
+                <md-outlined-text-field class="w-100" value="São Leopoldo" label="Nome" />
+              </div>
+              <div class="col-lg-6">
+                <md-outlined-text-field class="w-100" value="97.078.463/0001-08" label="CNPJ" />
+              </div>
+              <div class="col-lg-12">
+                <select name="E-mail" id="email" class="custom-select">
+                  <option value="">E-mail</option>
+                  <option selected value="1">contato@certivale.com.br</option>
+                </select>
+              </div>
+
+              <hr class="my-3" style="flex-basis: 100%;" />
+
+              <div class="col-lg-12">
+                <md-outlined-text-field class="w-100" value="Rua Espanha" label="Logradouro" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" value="870" type="number" label="Número" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" value="Vitória" label="Bairro" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" value="Rio Branco" label="Cidade" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" value="Acre" label="Estado" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" value="69901-827" label="CEP" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" label="Ponto de Referência" />
+              </div>
+
+            </div>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Delete -->
+  <div class="modal fade" id="delete-subsidiary" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Excluir Filial</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          Tem certeza que deseja excluir esta filial?
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-danger rounded-pill float-right">Excluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Modal Hours -->
+  <div class="modal fade" id="hours" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Gerenciar Horários</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row mb-2">
+            <div class="col-lg-3">
+              <div class="d-flex align-items-center h-100">
+                <h6>Segunda-feira</h6>
+              </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <div class="custom-control custom-switch">
+                <input checked type="checkbox" class="custom-control-input" id="monday">
+                <label class="custom-control-label" for="monday">Aberto</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center h-100" style="gap: 16px">
+                <input value="08:00" type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+                <div>Até</div>
+                <input value="17:00" type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-3">
+              <div class="d-flex align-items-center h-100">
+                <h6>Terça-feira</h6>
+              </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <div class="custom-control custom-switch">
+                <input checked type="checkbox" class="custom-control-input" id="tuesday">
+                <label class="custom-control-label" for="tuesday">Aberto</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center h-100" style="gap: 16px">
+                <input value="08:00" type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+                <div>Até</div>
+                <input value="17:00" type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-3">
+              <div class="d-flex align-items-center h-100">
+                <h6>Quarta-feira</h6>
+              </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <div class="custom-control custom-switch">
+                <input checked type="checkbox" class="custom-control-input" id="wednesday">
+                <label class="custom-control-label" for="wednesday">Aberto</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center h-100" style="gap: 16px">
+                <input value="08:00" checked type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+                <div>Até</div>
+                <input value="17:00" type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-3">
+              <div class="d-flex align-items-center h-100">
+                <h6>Quinta-feira</h6>
+              </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <div class="custom-control custom-switch">
+                <input checked type="checkbox" class="custom-control-input" id="thursday">
+                <label class="custom-control-label" for="thursday">Aberto</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center h-100" style="gap: 16px">
+                <input value="08:00" type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+                <div>Até</div>
+                <input value="17:00" type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-3">
+              <div class="d-flex align-items-center h-100">
+                <h6>Sexta-feira</h6>
+              </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <div class="custom-control custom-switch">
+                <input checked type="checkbox" class="custom-control-input" id="friday">
+                <label class="custom-control-label" for="friday">Aberto</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center h-100" style="gap: 16px">
+                <input value="08:00" type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+                <div>Até</div>
+                <input value="17:00" type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-3">
+              <div class="d-flex align-items-center h-100">
+                <h6>Sábado</h6>
+              </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="saturday">
+                <label class="custom-control-label" for="saturday">Aberto</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center h-100" style="gap: 16px">
+                <input type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+                <div>Até</div>
+                <input type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-lg-3">
+              <div class="d-flex align-items-center h-100">
+                <h6>Domingo</h6>
+              </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="sunday">
+                <label class="custom-control-label" for="sunday">Aberto</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center h-100" style="gap: 16px">
+                <input type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+                <div>Até</div>
+                <input type="text" class="form-control flatpickr-input active" data-toggle="time"
+                  placeholder="Selecione o horário">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->

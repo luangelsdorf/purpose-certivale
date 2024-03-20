@@ -30,8 +30,31 @@
 }
 
 md-outlined-text-field {
-  color: #8492A6;
+  color: #8492a6;
   box-shadow: inset 0 1px 1px rgba(31, 45, 61, 0.075);
+}
+
+.custom-select {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  padding: 1rem 2.25rem 1rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.38;
+  color: #49454f;
+  vertical-align: middle;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%233C4858' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 1.25rem center/8px 10px;
+  background-color: #fff;
+  border: 1px solid #79747e;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 1px 2px rgba(31, 45, 61, 0.075);
+  appearance: none;
+}
+
+.custom-control-label {
+  line-height: 1.4;
 }
 
 .nav-tabs .nav-link:not(.active) {
