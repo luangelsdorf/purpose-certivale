@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="Purpose Application UI is the following chapter we've finished in order to create a complete and robust solution next to the already known Purpose Website UI.">
+  <meta name="author" content="Webpixels">
+  <title>Certivale</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="/assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Page CSS -->
+  <link rel="stylesheet" href="/assets/libs/fullcalendar/dist/fullcalendar.min.css">
+  <!-- Purpose CSS -->
+  <link rel="stylesheet" href="/assets/css/purpose.css" id="stylesheet">
+  <link rel="stylesheet" href="/assets/libs/flatpickr/dist/flatpickr.min.css" id="stylesheet">
+
+  <script async src="/assets/js/init.js"></script>
+  <script type="module" src="/assets/libs/material/bundle.js"></script>
+</head>
+
+<body class="application application-offset">
+  <div class="container-fluid container-application">
+    <div class="main-content position-relative">
+      <div class="page-content">
+        <!-- Page title -->
+        <div class="page-title">
+          <div class="row justify-content-between align-items-center">
+            <div
+              class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+              <!-- Page title + Go Back button -->
+              <div class="d-inline-block">
+                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Usuários</h5>
+              </div>
+              <!-- Additional info -->
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
+              <button data-toggle="modal" data-target="#new-user"
+                class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4">
+                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Listing -->
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header actions-toolbar border-0">
+            <div class="actions-search" id="actions-search">
+              <div class="input-group input-group-merge input-group-flush">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-transparent"><i class="fas fa-search"></i></span>
+                </div>
+                <input type="text" class="form-control form-control-flush" placeholder="Digite e aperte enter ...">
+                <div class="input-group-append">
+                  <a href="#" class="input-group-text bg-transparent" data-action="search-close"
+                    data-target="#actions-search"><i class="fas fa-times"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+              <div class="col">
+                <h6 class="d-inline-block mb-0">Usuários</h6>
+              </div>
+              <div class="col text-right">
+                <div class="actions"><a href="#" class="action-item mr-3" data-action="search-open"
+                    data-target="#actions-search"><i class="fas fa-search"></i></a>
+                  <div class="dropdown mr-3">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <i class="fas fa-filter"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">
+                        <i class="fas fa-sort-amount-down"></i>Mais recente
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fas fa-sort-alpha-down"></i>De A-Z
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <i class="fas fa-sort-alpha-up"></i>De Z-A
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table align-items-center">
+              <thead>
+                <tr>
+                  <th scope="col">Nome</th>
+                  <th scope="col">CPF</th>
+                  <th scope="col">Função</th>
+                  <th scope="col">E-mail</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="d-flex flex-column">
+                      <a href="single" class="name h6 mb-0">Augusto Tomás da Mata</a>
+                      <small class="d-block font-weight-bold">#3e889a</small>
+                    </div>
+                  </th>
+                  <td>
+                    057.244.181-93
+                  </td>
+                  <td>
+                    Funcionário
+                  </td>
+                  <td>
+                    augusto_damata@soluxenergiasolar.com.br
+                  </td>
+                  <td>
+                    <div class="actions ml-3">
+                      <button class="action-item mr-2" data-toggle="modal" data-target="#edit-user"
+                        data-original-title="Editar">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="action-item mr-2" data-toggle="modal" data-target="#delete-user"
+                        data-original-title="Excluir">
+                        <i class="fas fa-trash text-danger"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Add -->
+  <div class="modal fade" id="new-user" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Novo Usuário</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form>
+            <div class="row" style="row-gap: 24px;">
+              <div class="col-lg-12">
+                <md-outlined-text-field class="w-100" label="Nome Completo" />
+              </div>
+              <div class="col-lg-6">
+                <input type="file" name="file-1[]" id="file-1" class="custom-input-file"
+                  data-multiple-caption="{count} files selected" multiple />
+                <label for="file-1">
+                  <i class="fa fa-upload"></i>
+                  <span>Foto de Perfil</span>
+                </label>
+              </div>
+              <div class="col-lg-6">
+                <select name="Função" id="role" class="custom-select">
+                  <option selected value="">Função</option>
+                  <option value="1">Administrador</option>
+                  <option value="1">Funcionário</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" label="CPF" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" type="email" label="E-mail" />
+              </div>
+              <div class="col-lg-12">
+                <md-outlined-text-field class="w-100" type="password" label="Senha" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Edit -->
+  <div class="modal fade" id="edit-user" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Editar Usuário</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form>
+            <div class="row" style="row-gap: 24px;">
+              <div class="col-lg-12">
+                <md-outlined-text-field class="w-100" value="Augusto Tomás da Mata" label="Nome Completo" />
+              </div>
+              <div class="col-lg-6">
+                <input type="file" name="file-1[]" id="file-1" class="custom-input-file" />
+                <label for="file-1">
+                  <i class="fa fa-upload"></i>
+                  <span>Foto de Perfil</span>
+                </label>
+              </div>
+              <div class="col-lg-6">
+                <select name="Função" id="role" class="custom-select">
+                  <option value="">Função</option>
+                  <option value="1">Administrador</option>
+                  <option selected value="1">Funcionário</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" value="057.244.181-93" label="CPF" />
+              </div>
+              <div class="col-md-6">
+                <md-outlined-text-field class="w-100" value="augusto_damata@gmail.com" type="email" label="E-mail" />
+              </div>
+              <div class="col-lg-12">
+                <md-outlined-text-field class="w-100" value="Ymc6twab7E" type="password" label="Senha" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Delete -->
+  <div class="modal fade" id="delete-subsidiary" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Excluir Usuário</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          Tem certeza que deseja excluir este usuário?
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-danger rounded-pill float-right">Excluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="/assets/js/purpose.core.js"></script>
+  <!-- Page JS -->
+  <script src="/assets/libs/progressbar.js/dist/progressbar.min.js"></script>
+  <script src="/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="/assets/libs/moment/min/moment.min.js"></script>
+  <script src="/assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
+  <script src="/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+  <!-- Purpose JS -->
+  <script src="/assets/js/purpose.js"></script>
+</body>
+
+</html>

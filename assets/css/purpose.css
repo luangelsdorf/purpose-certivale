@@ -24102,7 +24102,7 @@ md-outlined-text-field {
   box-shadow: inset 0 1px 1px rgba(31, 45, 61, 0.075);
 }
 
-.custom-select {
+.custom-select, .custom-input-file + label {
   display: inline-block;
   width: 100%;
   height: auto;
