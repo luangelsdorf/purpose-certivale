@@ -24140,4 +24140,9 @@ md-outlined-text-field {
   margin: 3em 0;
 }
 
+.media > i {
+  position: relative;
+  top: 6px;
+}
+
 /*# sourceMappingURL=purpose.css.map */
