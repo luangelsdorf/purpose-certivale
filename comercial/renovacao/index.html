@@ -93,8 +93,10 @@
                 <div class="form-group mb-4">
                   <label class="material-label z-index-1">Canal de Contato</label>
                   <select name="E-mail" class="custom-select">
-                    <option selected value="1">Presencial</option>
-                    <option value="2">Online</option>
+                    <option selected value="1">Todos os Canais</option>
+                    <option value="2">Website</option>
+                    <option value="2">Indicação</option>
+                    <option value="2">Contato Direto</option>
                   </select>
                 </div>
               </div>
@@ -1287,6 +1289,19 @@
   <script src="/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
   <!-- Purpose JS -->
   <script src="/assets/js/purpose.js"></script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[id*=Cell][id*=Body]').forEach(el => {
+        el.addEventListener('click', () => window.location.pathname = '/comercial/clientes/single');
+      })
+    })
+  </script>
+  <style>
+    [id*=Cell][id*=Body] {
+      cursor: pointer !important;
+    }
+  </style>
 </body>
 
 </html>
