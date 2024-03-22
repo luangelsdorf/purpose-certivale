@@ -67,8 +67,9 @@
             <div class="modal fade" id="new-event" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
+                  <div class="modal-header d-flex align-items-center justify-content-between">
                     <h6>Cadastrar Venda</h6>
+                    <div style="color: #C0CCDA">Protocolo: <span style="color: #8492A6">1005492603</span></div>
                   </div>
                   <!-- Modal body -->
                   <div class="modal-body">
@@ -386,8 +387,8 @@
                               <div class="form-group">
                                 <label class="material-label">CVV</label>
                                 <div class="input-group input-group-merge">
-                                  <input type="text" class="form-control" data-mask="000" value="746"
-                                    autocomplete="off" maxlength="3">
+                                  <input type="text" class="form-control" data-mask="000" value="746" autocomplete="off"
+                                    maxlength="3">
                                   <div class="input-group-append">
                                     <span class="input-group-text"><i class="far fa-question-circle"></i></span>
                                   </div>
@@ -411,137 +412,168 @@
               </div>
             </div>
             <!-- Modal - Edit event -->
-            <div class="modal fade" id="edit-event" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal fade" id="new-event" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h6>Criar Evento</h6>
+                  <div class="modal-header d-flex align-items-center justify-content-between">
+                    <h6>Editar Venda</h6>
+                    <div style="color: #C0CCDA">Protocolo: <span style="color: #8492A6">1005492603</span></div>
                   </div>
                   <!-- Modal body -->
                   <div class="modal-body">
                     <ul class="nav nav-tabs mb-3">
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home-edit"
-                          type="button" role="tab" aria-controls="home" aria-selected="true">Pessoa Física</button>
+                      <li class="nav-item">
+                        <button class="nav-link active" id="product-tab" data-toggle="tab" data-target="#product"
+                          type="button">Produto e Agendamento</button>
                       </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile-edit"
-                          type="button" role="tab" aria-controls="profile" aria-selected="false">Pessoa
-                          Jurídica</button>
+                      <li class="nav-item">
+                        <button class="nav-link" id="home-tab" data-toggle="tab" data-target="#home"
+                          type="button">Pessoa Física</button>
+                      </li>
+                      <li class="nav-item">
+                        <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile"
+                          type="button">Pessoa Jurídica</button>
+                      </li>
+                      <li class="nav-item">
+                        <button class="nav-link" id="payment-tab" data-toggle="tab" data-target="#payment"
+                          type="button">Pagamento e NF-e</button>
                       </li>
                     </ul>
                     <div class="tab-content">
-                      <div class="tab-pane fade show active" id="home-edit" role="tabpanel" aria-labelledby="home-tab">
+                      <div class="tab-pane fade show active" id="product" aria-labelledby="home-tab">
                         <form>
                           <!-- General information -->
                           <div class="row">
-                            <div class="col">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Amanda Rios dos Santos"
-                                  label="Nome do Titular" />
+                            <div class="col-lg-3">
+                              <div class="form-group mb-4">
+                                <label class="material-label z-index-1">Produto</label>
+                                <select name="E-mail" class="custom-select">
+                                  <option selected value="1">e-CPF A1</option>
+                                  <option value="2">e-CPF A2</option>
+                                  <option value="3">e-CPF A3</option>
+                                  <option value="4">e-CNPJ A1</option>
+                                  <option value="5">e-CNPJ A3</option>
+                                  <option value="6">NF-e A1</option>
+                                  <option value="7">NF-e A3</option>
+                                  <option value="8">SafeID CPF A3</option>
+                                  <option value="8">SafeID CNPJ A3</option>
+                                </select>
                               </div>
                             </div>
-                          </div>
-                          <div class="row align-items-center">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="512.895.210-60" label="CPF" />
+                            <div class="col-lg-3">
+                              <div class="form-group mb-4">
+                                <label class="material-label z-index-1">Emissão</label>
+                                <select name="E-mail" class="custom-select">
+                                  <option selected value="1">Presencial</option>
+                                  <option value="2">Online</option>
+                                </select>
                               </div>
                             </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="04/12/1994" label="Data de Nascimento" />
+                            <div class="col-lg-3">
+                              <div class="form-group mb-4">
+                                <label class="material-label z-index-1">Validade</label>
+                                <select name="E-mail" class="custom-select">
+                                  <option selected value="1">1 Ano</option>
+                                  <option value="2">2 Anos</option>
+                                  <option value="3">3 Anos</option>
+                                </select>
                               </div>
                             </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="(51) 99568-2571" label="Telefone" />
+                            <div class="col-lg-3">
+                              <div class="form-group mb-4">
+                                <md-outlined-text-field class="w-100" value="R$150,00" disabled label="Valor" />
                               </div>
                             </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="amandarios21@gmail.com" label="E-mail" />
+                            <div class="col-lg-4">
+                              <div class="form-group mb-4">
+                                <label class="material-label z-index-1">Data do Atendimento</label>
+                                <input type="date" class="w-100" value="2024-03-22" />
                               </div>
                             </div>
-                          </div>
-
-                          <hr />
-                          <!-- Address -->
-
-                          <div class="row">
-                            <div class="col">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Rua Espanha" label="Logradouro" />
+                            <div class="col-lg-4">
+                              <div class="form-group mb-4">
+                                <label class="material-label z-index-1">Horário</label>
+                                <input type="time" class="w-100" value="08:00" />
                               </div>
                             </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="870" type="number" label="Número" />
+                            <div class="col-lg-4">
+                              <label class="material-label z-index-1">Local de Atendimento</label>
+                              <div class="form-group mb-4">
+                                <select name="E-mail" class="custom-select">
+                                  <option selected value="">Novo Hamburgo</option>
+                                  <option value="1">São Leopoldo</option>
+                                  <option value="2">Campo Bom</option>
+                                  <option value="3">Porto Alegre</option>
+                                </select>
                               </div>
                             </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Vitória" label="Bairro" />
+                            <div class="col-lg-6">
+                              <label class="material-label z-index-1">Parceiro Indicador</label>
+                              <div class="form-group mb-4">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                      <input type="checkbox" aria-label="Checkbox for following text input">
+                                    </div>
+                                  </div>
+                                  <select name="E-mail" class="custom-select">
+                                    <option selected value="">Contábil Ramos</option>
+                                    <option value="1">Inter Contábil</option>
+                                    <option value="2">Martins Contabilidade</option>
+                                    <option value="3">Santos & Silva</option>
+                                  </select>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Rio Branco" label="Cidade" />
+                            <div class="col-lg-6">
+                              <div class="form-group mb-4">
+                                <label class="material-label">Agente Responsável</label>
+                                <select name="E-mail" class="custom-select">
+                                  <option selected value="">Solange da Silva</option>
+                                </select>
                               </div>
                             </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Acre" label="Estado" />
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="69901-827" label="CEP" />
+                            <div class="col-lg-12">
+                              <div class="form-group mb-4">
+                                <md-outlined-text-field type="textarea" rows="4" class="w-100"
+                                  label="Descrição do Contato"
+                                  value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
                               </div>
                             </div>
                           </div>
                         </form>
                       </div>
-                      <div class="tab-pane fade" id="profile-edit" role="tabpanel" aria-labelledby="profile-tab">
+                      <div class="tab-pane fade" id="home" aria-labelledby="home-tab">
                         <form>
                           <!-- General information -->
                           <div class="row">
                             <div class="col">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Manhães Santos Contabilidade LTDA"
-                                  label="Razão Social" />
+                                <md-outlined-text-field class="w-100" label="Nome do Titular" />
                               </div>
                             </div>
                           </div>
                           <div class="row align-items-center">
                             <div class="col-md-6">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Contabilidade Manhães"
-                                  label="Nome Fantasia" />
+                                <md-outlined-text-field class="w-100" label="CPF" />
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="87.027.275/0001-05" label="CNPJ" />
+                                <md-outlined-text-field class="w-100" label="Data de Nascimento" />
                               </div>
                             </div>
                           </div>
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="(68) 3328-5415" label="Telefone" />
+                                <md-outlined-text-field class="w-100" label="Telefone" />
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="contabilidade.manhaes@geradornv.com.br"
-                                  label="E-mail" />
+                                <md-outlined-text-field class="w-100" label="E-mail" />
                               </div>
                             </div>
                           </div>
@@ -552,37 +584,163 @@
                           <div class="row">
                             <div class="col">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Rua Olimpio Venturini"
-                                  label="Logradouro" />
+                                <md-outlined-text-field class="w-100" label="Logradouro" />
                               </div>
                             </div>
                           </div>
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="210" type="number" label="Número" />
+                                <md-outlined-text-field class="w-100" type="number" label="Número" />
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Lagoa" label="Bairro" />
+                                <md-outlined-text-field class="w-100" label="Bairro" />
                               </div>
                             </div>
                           </div>
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Gaspar" label="Cidade" />
+                                <md-outlined-text-field class="w-100" label="Cidade" />
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="Santa Catarina" label="Estado" />
+                                <md-outlined-text-field class="w-100" label="Estado" />
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group">
-                                <md-outlined-text-field class="w-100" value="89115-495" label="CEP" />
+                                <md-outlined-text-field class="w-100" label="CEP" />
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form>
+                          <!-- General information -->
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="Razão Social" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row align-items-center">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="Nome Fantasia" />
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="CNPJ" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="Telefone" />
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="E-mail" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr />
+                          <!-- Address -->
+
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="Logradouro" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" type="number" label="Número" />
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="Bairro" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="Cidade" />
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="Estado" />
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <md-outlined-text-field class="w-100" value="" label="CEP" />
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="payment">
+                        <form>
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="form-group mb-4">
+                                <label class="material-label">Método de Pagamento</label>
+                                <select name="E-mail" class="custom-select">
+                                  <option selected value="">Cartão de Crédito</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-lg-12">
+                              <div class="form-group position-relative">
+                                <label class="material-label">Número do Cartão</label>
+                                <div class="input-group input-group-merge">
+                                  <input type="text" class="form-control" data-mask="0000 0000 0000 0000"
+                                    value="4789 5697 0541 7546" autocomplete="off" maxlength="19">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="far fa-credit-card"></i></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label class="material-label">Nome no Cartão</label>
+                                <input type="text" class="form-control" value="João da Silva">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label class="material-label">Validade</label>
+                                <input type="text" class="form-control" data-mask="00/00" value="05/29"
+                                  autocomplete="off" maxlength="5">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label class="material-label">CVV</label>
+                                <div class="input-group input-group-merge">
+                                  <input type="text" class="form-control" data-mask="000" value="746" autocomplete="off"
+                                    maxlength="3">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="far fa-question-circle"></i></span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -592,9 +750,11 @@
                   </div>
                   <!-- Modal footer -->
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-sm btn-primary rounded-pill float-right new-event--add">Criar
-                      evento</button>
+                    <button type="button" class="btn btn-sm btn-link text-danger mr-auto"
+                      data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Salvar Rascunho</button>
+                    <button type="button" class="btn btn-sm btn-primary rounded-pill float-right new-event--add"
+                      data-dismiss="modal">Criar evento</button>
                   </div>
                 </div>
               </div>
