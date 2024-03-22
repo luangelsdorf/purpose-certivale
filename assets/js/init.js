@@ -15,6 +15,10 @@ window.addEventListener('DOMContentLoaded', async () => {
   const search = await searchReq.text();
   document.querySelector('.page-content').insertAdjacentHTML('beforebegin', search);
 
+  const modalReq = await fetch('/components/modal.html');
+  const modal = await modalReq.text();
+  document.querySelector('body').insertAdjacentHTML('beforeend', modal);
+
   const activeModule = window.location.pathname.split('/')[1];
   const sidenavOptions = document.querySelectorAll('[data-slug]');
   sidenavOptions.forEach(el => {
