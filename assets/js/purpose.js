@@ -1896,8 +1896,8 @@ var Fullcalendar = (function () {
 		}, {
 			id: 3,
 			title: "Tomás e Nathan Alimentos Ltda",
-			start: "2024-03-29T13:00",
-			end: "2024-03-29T13:20",
+			start: "2024-03-28T13:00",
+			end: "2024-03-28T13:20",
 			className: "bg-soft-success text-success",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 		}, {
@@ -1949,6 +1949,14 @@ var Fullcalendar = (function () {
 			end: "2024-03-02T14:20",
 			className: "bg-soft-yellow text-yellow",
 			description: "Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+		}, {
+			id: 11,
+			title: "Sexta-feira Santa",
+			start: "2024-03-29T00:00",
+			end: "2024-03-29T23:59",
+			allDay: true,
+			className: "bg-soft-dark text-dark",
+			description: "Devido ao feriado de Sexta-feira Santa/Páscoa, não haverá atividades."
 		}],
 
 
@@ -1989,6 +1997,12 @@ var Fullcalendar = (function () {
 				editable: true,
 				events: events,
 
+				views: {
+					listWeek: {
+						displayEventTime: true,
+					}
+				},
+
 				dayClick: function (date) {
 					var isoDate = moment(date).toISOString();
 					$('#new-event').modal('show');
@@ -2026,13 +2040,13 @@ var Fullcalendar = (function () {
 
 		// Initalize the calendar plugin
 		$this.fullCalendar(options);
-		
+
 		document.addEventListener('DOMContentLoaded', () => {
-      const action = new URLSearchParams(window.location.search).get('action');
-      if (action === 'close') {
-        $this.fullCalendar('changeView', 'listWeek');
-      }
-    });
+			const action = new URLSearchParams(window.location.search).get('action');
+			if (action === 'close') {
+				$this.fullCalendar('changeView', 'listWeek');
+			}
+		});
 
 
 		//

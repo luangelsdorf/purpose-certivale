@@ -11,7 +11,13 @@
 }
 
 .fc-event-dot {
-  background-color: $sky-blue;
+  background-color: transparent;
+}
+
+.fc-listWeek-view {
+  tr:not([data-date="2024-03-29"], .bg-soft-dark) {
+    display: none;
+  }
 }
 
 .fc-list-empty-wrap2 {
