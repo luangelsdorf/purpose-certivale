@@ -45,7 +45,7 @@
                   <i class="fas fa-file-export mr-2"></i>Exportar
                 </a>
               </div>
-              <button data-toggle="modal" data-target="#new-subsidiary"
+              <button data-toggle="modal" data-target="#commercial-action"
                 class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4">
                 <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
               </button>
@@ -58,19 +58,19 @@
           <div class="card-header actions-toolbar border-0">
             <div class="row justify-content-between align-items-center">
               <div class="col">
-                <div class="form-group mb-4">
+                <div class="form-group">
                   <label class="material-label z-index-1">Data Inicial</label>
                   <input type="date" class="w-100" value="2024-03-22" />
                 </div>
               </div>
               <div class="col">
-                <div class="form-group mb-4">
+                <div class="form-group">
                   <label class="material-label z-index-1">Data Final</label>
                   <input type="date" class="w-100" value="2024-03-22" />
                 </div>
               </div>
               <div class="col">
-                <div class="form-group mb-4">
+                <div class="form-group">
                   <label class="material-label z-index-1">Cliente</label>
                   <select name="E-mail" class="custom-select">
                     <option selected value="1">Todos os Clientes</option>
@@ -78,7 +78,7 @@
                 </div>
               </div>
               <div class="col">
-                <div class="form-group mb-4">
+                <div class="form-group">
                   <label class="material-label z-index-1">Status</label>
                   <select name="E-mail" class="custom-select">
                     <option selected value="1">Todos</option>
@@ -90,7 +90,7 @@
                 </div>
               </div>
               <div class="col">
-                <div class="form-group mb-4">
+                <div class="form-group">
                   <label class="material-label z-index-1">Canal de Contato</label>
                   <select name="E-mail" class="custom-select">
                     <option selected value="1">Todos os Canais</option>
@@ -963,59 +963,79 @@
   </div>
 
   <!-- Modal Add -->
-  <div class="modal fade" id="new-subsidiary" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade" id="commercial-action" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h6>Nova Filial</h6>
+          <h6>Cadastrar Ação Comercial</h6>
         </div>
         <!-- Modal body -->
         <div class="modal-body">
           <form class="edit-event--form">
             <div class="row" style="row-gap: 24px;">
               <div class="col-lg-6">
-                <md-outlined-text-field class="w-100" label="Nome" />
+                <div class="form-group">
+                  <label class="material-label z-index-1">Data Inicial</label>
+                  <input type="date" class="w-100" value="2024-03-01" />
+                </div>
               </div>
               <div class="col-lg-6">
-                <md-outlined-text-field class="w-100" label="CNPJ" />
+                <label class="material-label z-index-1">Status</label>
+                <div class="form-group">
+                  <select name="E-mail" class="custom-select">
+                    <option selected value="4">Indefinido</option>
+                    <option selected value="4">Agendado</option>
+                    <option selected value="4">Concorrente</option>
+                    <option selected value="4">Renovado</option>
+                  </select>
+                </div>
               </div>
               <div class="col-lg-12">
-                <select name="E-mail" id="email" class="custom-select">
-                  <option value="">E-mail</option>
-                  <option selected value="1">contato@certivale.com.br</option>
-                </select>
+                <label class="material-label z-index-1">Cliente</label>
+                <div class="form-group">
+                  <select name="E-mail" class="custom-select">
+                    <option value="">Amanda Rios</option>
+                    <option selected value="1">Bárbara Flores</option>
+                    <option value="2">Gilson Rodrigues</option>
+                    <option value="3">Maria Alice</option>
+                  </select>
+                </div>
               </div>
-
-              <hr class="my-3" style="flex-basis: 100%;" />
-
               <div class="col-lg-12">
-                <md-outlined-text-field class="w-100" label="Logradouro" />
+                <label class="material-label z-index-1">Agente</label>
+                <div class="form-group">
+                  <select name="E-mail" class="custom-select">
+                    <option value="">Amanda Rios</option>
+                    <option selected value="1">Vanessa da Silva</option>
+                    <option value="2">Gilson Rodrigues</option>
+                    <option value="3">Maria Alice</option>
+                  </select>
+                </div>
               </div>
-              <div class="col-md-6">
-                <md-outlined-text-field class="w-100" type="number" label="Número" />
+              <div class="col-lg-6">
+                <label class="material-label z-index-1">Canal de Contato</label>
+                <div class="form-group">
+                  <select name="E-mail" class="custom-select">
+                    <option value="">Todos os Canais</option>
+                    <option selected value="1">Telefone</option>
+                    <option value="2">E-mail</option>
+                    <option value="3">WhatsApp</option>
+                    <option value="4">Outro</option>
+                  </select>
+                </div>
               </div>
-              <div class="col-md-6">
-                <md-outlined-text-field class="w-100" label="Bairro" />
+              <div class="col-lg-6">
+                <md-outlined-text-field class="w-100" value="(51) 99568-2571" label="Telefone" />
               </div>
-              <div class="col-md-6">
-                <md-outlined-text-field class="w-100" label="Cidade" />
+              <div class="col-lg-12">
+                <md-outlined-text-field type="textarea" class="w-100" value="Falávamos via telefone, a ligação caiu, enviei os avisos via WhatsApp. Aguardo retorno." label="Descrição do Contato" />
               </div>
-              <div class="col-md-6">
-                <md-outlined-text-field class="w-100" label="Estado" />
-              </div>
-              <div class="col-md-6">
-                <md-outlined-text-field class="w-100" label="CEP" />
-              </div>
-              <div class="col-md-6">
-                <md-outlined-text-field class="w-100" label="Ponto de Referência" />
-              </div>
-
             </div>
           </form>
         </div>
         <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+        <div class="modal-footer d-flex justify-content-between">
+          <button type="button" class="btn btn-sm btn-link text-danger" data-dismiss="modal">Cancelar</button>
           <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">Salvar</button>
         </div>
       </div>
