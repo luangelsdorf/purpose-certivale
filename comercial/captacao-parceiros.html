@@ -30,7 +30,7 @@
           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header d-flex align-items-center justify-content-between">
-                <h6>Cadastrar Venda</h6>
+                <h6>Novo Parceiro</h6>
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -186,49 +186,41 @@
                   <div class="tab-pane fade" id="bank-info">
                     <form>
                       <div class="row">
-                        <div class="col-lg-12">
-                          <div class="form-group mb-4">
-                            <label class="material-label">Método de Pagamento</label>
-                            <select name="E-mail" class="custom-select">
-                              <option selected value="">Cartão de Crédito</option>
+                        <div class="col-12">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" value="512.895.210-60" label="Documento" />
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-group">
+                            <select name="E-mail" id="email" class="custom-select">
+                              <option selected value="">Banco</option>
+                              <option value="1">033 - Banco Santander (Brasil) S.A.</option>
                             </select>
                           </div>
                         </div>
-                        <div class="col-lg-12">
-                          <div class="form-group position-relative">
-                            <label class="material-label">Número do Cartão</label>
-                            <div class="input-group input-group-merge">
-                              <input type="text" class="form-control" data-mask="0000 0000 0000 0000"
-                                value="4789 5697 0541 7546" autocomplete="off" maxlength="19">
-                              <div class="input-group-append">
-                                <span class="input-group-text"><i class="far fa-credit-card"></i></span>
-                              </div>
-                            </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-8">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" value="" type="number" label="Agência" />
                           </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                           <div class="form-group">
-                            <label class="material-label">Nome no Cartão</label>
-                            <input type="text" class="form-control" value="João da Silva">
+                            <md-outlined-text-field class="w-100" value="" label="Dígito" />
                           </div>
                         </div>
-                        <div class="col-md-3">
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-md-8">
                           <div class="form-group">
-                            <label class="material-label">Validade</label>
-                            <input type="text" class="form-control" data-mask="00/00" value="05/29" autocomplete="off"
-                              maxlength="5">
+                            <md-outlined-text-field class="w-100" value="" label="Número da Conta" />
                           </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                           <div class="form-group">
-                            <label class="material-label">CVV</label>
-                            <div class="input-group input-group-merge">
-                              <input type="text" class="form-control" data-mask="000" value="746" autocomplete="off"
-                                maxlength="3">
-                              <div class="input-group-append">
-                                <span class="input-group-text"><i class="far fa-question-circle"></i></span>
-                              </div>
-                            </div>
+                            <md-outlined-text-field class="w-100" value="" label="Dígito" />
                           </div>
                         </div>
                       </div>
@@ -240,9 +232,8 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-sm btn-link text-danger mr-auto"
                   data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Salvar Rascunho</button>
                 <button type="button" class="btn btn-sm btn-primary rounded-pill float-right new-event--add"
-                  data-dismiss="modal">Criar evento</button>
+                  data-dismiss="modal">Cadastrar Parceiro</button>
               </div>
             </div>
           </div>
@@ -268,7 +259,7 @@
                   <i class="fas fa-file-export mr-2"></i>Exportar
                 </a>
               </div>
-              <a href="#new-partners" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
+              <a href="#new-partner" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
                 <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
               </a>
             </div>
