@@ -16,6 +16,7 @@
   <!-- Purpose CSS -->
   <link rel="stylesheet" href="../assets/css/purpose.css" id="stylesheet">
 
+  <script type="module" src="/assets/libs/material/bundle.js"></script>
   <script async src="/assets/js/init.js"></script>
 </head>
 
@@ -24,11 +25,228 @@
     <div class="main-content position-relative">
       <div class="page-content">
         <!-- Modals -->
+        <!-- Create modal -->
+        <div class="modal fade" id="new-partner" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header d-flex align-items-center justify-content-between">
+                <h6>Cadastrar Venda</h6>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Origem: Website
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-dot-circle text-primary"></i>Website
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-dot-circle text-info"></i>Contato Direto
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="fas fa-dot-circle" style="color: #ea4c89;"></i>Indicação
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                <ul class="nav nav-tabs mb-3">
+                  <li class="nav-item">
+                    <button class="nav-link active" data-toggle="tab" data-target="#pf" type="button">Pessoa
+                      Física</button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link" data-toggle="tab" data-target="#pj" type="button">Pessoa Jurídica</button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link" data-toggle="tab" data-target="#address" type="button">Endereço</button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link" data-toggle="tab" data-target="#bank-info" type="button">Dados
+                      Bancários</button>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="pf">
+                    <form>
+                      <!-- General information -->
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="Nome do Titular" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row align-items-center">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="CPF" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="Data de Nascimento" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="Telefone" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="E-mail" />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
 
-        <!-- Create task modal -->
+                  <div class="tab-pane fade" id="pj">
+                    <form>
+                      <!-- General information -->
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" value="" label="Razão Social" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row align-items-center">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" value="" label="Nome Fantasia" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" value="" label="CNPJ" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" value="" label="Telefone" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" value="" label="E-mail" />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
 
-        <!-- Show task modal -->
+                  <div class="tab-pane fade" id="address">
+                    <form>
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="Logradouro" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" type="number" label="Número" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="Bairro" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="Cidade" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="Estado" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <md-outlined-text-field class="w-100" label="CEP" />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
 
+                  <div class="tab-pane fade" id="bank-info">
+                    <form>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-group mb-4">
+                            <label class="material-label">Método de Pagamento</label>
+                            <select name="E-mail" class="custom-select">
+                              <option selected value="">Cartão de Crédito</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="form-group position-relative">
+                            <label class="material-label">Número do Cartão</label>
+                            <div class="input-group input-group-merge">
+                              <input type="text" class="form-control" data-mask="0000 0000 0000 0000"
+                                value="4789 5697 0541 7546" autocomplete="off" maxlength="19">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="far fa-credit-card"></i></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="material-label">Nome no Cartão</label>
+                            <input type="text" class="form-control" value="João da Silva">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label class="material-label">Validade</label>
+                            <input type="text" class="form-control" data-mask="00/00" value="05/29" autocomplete="off"
+                              maxlength="5">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label class="material-label">CVV</label>
+                            <div class="input-group input-group-merge">
+                              <input type="text" class="form-control" data-mask="000" value="746" autocomplete="off"
+                                maxlength="3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="far fa-question-circle"></i></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-link text-danger mr-auto"
+                  data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Salvar Rascunho</button>
+                <button type="button" class="btn btn-sm btn-primary rounded-pill float-right new-event--add"
+                  data-dismiss="modal">Criar evento</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Page title -->
         <div class="page-title">
           <div class="row justify-content-between align-items-center">
@@ -46,11 +264,11 @@
             </div>
             <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
               <div class="actions actions-dark d-inline-block">
-                <a href="#" class="action-item ml-md-4">
+                <a href="#partners-report" class="action-item ml-md-4" data-toggle="modal">
                   <i class="fas fa-file-export mr-2"></i>Exportar
                 </a>
               </div>
-              <a href="#" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4">
+              <a href="#new-partners" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
                 <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
               </a>
             </div>
