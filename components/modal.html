@@ -1,4 +1,297 @@
 <section>
+  <div class="modal fade" id="renovation-report" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Relatório</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <label class="material-label z-index-1">Tipo de Relatório</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option selected value="">Relatório de Renovações</option>
+                  <option value="1">Relatório de Bonificações</option>
+                  <option value="2">Relatório de Parceiros</option>
+                  <option value="3">Relatório de Suporte</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="material-label z-index-1">Cliente</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option selected value="">Todos os Clientes</option>
+                  <option value="">Amanda Rios</option>
+                  <option value="1">Bárbara Flores</option>
+                  <option value="2">Gilson Rodrigues</option>
+                  <option value="3">Maria Alice</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group mb-4">
+                <label class="material-label z-index-1">Data Inicial</label>
+                <input type="date" class="w-100" value="2024-03-01" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group mb-4">
+                <label class="material-label z-index-1">Data Final</label>
+                <input type="date" class="w-100" value="2024-03-31" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="d-flex" style="gap: 24px;">
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="hideValues">
+                  <label class="custom-control-label" for="hideValues">Ocultar Valores</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="sendMail">
+                  <label class="custom-control-label" for="sendMail">Enviar cópia por e-mail</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer d-flex align-items-center justify-content-between">
+          <button type="button" class="btn btn-sm btn-link text-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">
+            <span>Gerar Relatório</span>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="reward-report" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Relatório</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <label class="material-label z-index-1">Tipo de Relatório</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option value="">Relatório de Renovações</option>
+                  <option selected value="1">Relatório de Bonificações</option>
+                  <option value="2">Relatório de Parceiros</option>
+                  <option value="3">Relatório de Suporte</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="material-label z-index-1">Parceiro</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option selected value="">Contábil Ramos</option>
+                  <option value="1">Inter Contábil</option>
+                  <option value="2">Martins Contabilidade</option>
+                  <option value="3">Santos & Silva</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group mb-4">
+                <label class="material-label z-index-1">Data Inicial</label>
+                <input type="date" class="w-100" value="2024-03-01" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group mb-4">
+                <label class="material-label z-index-1">Data Final</label>
+                <input type="date" class="w-100" value="2024-03-31" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="d-flex" style="gap: 24px;">
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="hideValues">
+                  <label class="custom-control-label" for="hideValues">Ocultar Valores</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="sendMail">
+                  <label class="custom-control-label" for="sendMail">Enviar cópia por e-mail</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">
+            <span>Gerar Relatório</span>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="partners-report" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Relatório</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <label class="material-label z-index-1">Tipo de Relatório</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option value="">Relatório de Renovações</option>
+                  <option value="1">Relatório de Bonificações</option>
+                  <option selected value="2">Relatório de Parceiros</option>
+                  <option value="3">Relatório de Suporte</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="material-label z-index-1">Origem do Parceiro</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option selected value="">Todos os Canais</option>
+                  <option value="1">Contato Direto</option>
+                  <option value="2">Website</option>
+                  <option value="3">Indicações</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group mb-4">
+                <label class="material-label z-index-1">Data Inicial</label>
+                <input type="date" class="w-100" value="2024-03-01" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group mb-4">
+                <label class="material-label z-index-1">Data Final</label>
+                <input type="date" class="w-100" value="2024-03-31" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="d-flex" style="gap: 24px;">
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="list">
+                  <label class="custom-control-label" for="list">Listar somente parcerias efetivadas</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">
+            <span>Gerar Relatório</span>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="support-report" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Relatório</h6>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12">
+              <label class="material-label z-index-1">Tipo de Relatório</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option value="">Relatório de Renovações</option>
+                  <option value="1">Relatório de Bonificações</option>
+                  <option value="2">Relatório de Parceiros</option>
+                  <option selected value="3">Relatório de Suporte</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="material-label z-index-1">Agente de Suporte</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option selected value="">Fábio Stark</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="material-label z-index-1">Cliente</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option selected value="">Todos os Clientes</option>
+                  <option value="">Amanda Rios</option>
+                  <option value="1">Bárbara Flores</option>
+                  <option value="2">Gilson Rodrigues</option>
+                  <option value="3">Maria Alice</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="material-label z-index-1">Canal de Atendimento</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option selected value="">Todos os Canais</option>
+                  <option value="1">Telefone</option>
+                  <option value="2">E-mail</option>
+                  <option value="3">WhatsApp</option>
+                  <option value="4">Outro</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="material-label z-index-1">Problema Reportado</label>
+              <div class="form-group mb-4">
+                <select name="E-mail" class="custom-select">
+                  <option selected value="4">Não Especificado</option>
+                  <option value="1">Instalação</option>
+                  <option value="2">Integração</option>
+                  <option value="3">Atualização</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group mb-4">
+                <label class="material-label z-index-1">Data Inicial</label>
+                <input type="date" class="w-100" value="2024-03-01" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group mb-4">
+                <label class="material-label z-index-1">Data Final</label>
+                <input type="date" class="w-100" value="2024-03-31" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">
+            <span>Gerar Relatório</span>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="base-report" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -33,13 +326,13 @@
             <div class="col-lg-6">
               <div class="form-group mb-4">
                 <label class="material-label z-index-1">Data Inicial</label>
-                <input type="date" class="w-100" value="2024-03-22" />
+                <input type="date" class="w-100" value="2024-03-01" />
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group mb-4">
                 <label class="material-label z-index-1">Data Final</label>
-                <input type="date" class="w-100" value="2024-03-22" />
+                <input type="date" class="w-100" value="2024-03-31" />
               </div>
             </div>
           </div>
@@ -47,227 +340,10 @@
         <!-- Modal footer -->
         <div class="modal-footer d-flex align-items-center justify-content-between">
           <button type="button" class="btn btn-sm btn-link text-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right" data-calendar="update">Gerar
-            Relatório</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="renovation-report" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h6>Relatório</h6>
-        </div>
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-12">
-              <label class="material-label z-index-1">Tipo de Relatório</label>
-              <div class="form-group mb-4">
-                <select name="E-mail" class="custom-select">
-                  <option selected value="">Relatório de Renovações</option>
-                  <option value="1">Relatório de Bonificações</option>
-                  <option value="2">Relatório de Parceiros</option>
-                  <option value="3">Relatório de Suporte</option>
-                </select>
-              </div>
-            </div>
-            <!-- <div class="col-12">
-              <label class="material-label z-index-1">Parceiro</label>
-              <div class="form-group mb-4">
-                <select name="E-mail" class="custom-select">
-                  <option selected value="">Contábil Ramos</option>
-                  <option value="1">Inter Contábil</option>
-                  <option value="2">Martins Contabilidade</option>
-                  <option value="3">Santos & Silva</option>
-                </select>
-              </div>
-            </div> -->
-            <div class="col-lg-6">
-              <div class="form-group mb-4">
-                <label class="material-label z-index-1">Data Inicial</label>
-                <input type="date" class="w-100" value="2024-03-22" />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-group mb-4">
-                <label class="material-label z-index-1">Data Final</label>
-                <input type="date" class="w-100" value="2024-03-22" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Modal footer -->
-        <div class="modal-footer d-flex align-items-center justify-content-between">
-          <button type="button" class="btn btn-sm btn-link text-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right" data-calendar="update">Gerar
-            Relatório</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="reward-report" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h6>Relatório</h6>
-        </div>
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-12">
-              <label class="material-label z-index-1">Tipo de Relatório</label>
-              <div class="form-group mb-4">
-                <select name="E-mail" class="custom-select">
-                  <option selected value="">Relatório de Renovações</option>
-                  <option value="1">Relatório de Bonificações</option>
-                  <option value="2">Relatório de Parceiros</option>
-                  <option value="3">Relatório de Suporte</option>
-                </select>
-              </div>
-            </div>
-            <!-- <div class="col-12">
-              <label class="material-label z-index-1">Parceiro</label>
-              <div class="form-group mb-4">
-                <select name="E-mail" class="custom-select">
-                  <option selected value="">Contábil Ramos</option>
-                  <option value="1">Inter Contábil</option>
-                  <option value="2">Martins Contabilidade</option>
-                  <option value="3">Santos & Silva</option>
-                </select>
-              </div>
-            </div> -->
-            <div class="col-lg-6">
-              <div class="form-group mb-4">
-                <label class="material-label z-index-1">Data Inicial</label>
-                <input type="date" class="w-100" value="2024-03-22" />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-group mb-4">
-                <label class="material-label z-index-1">Data Final</label>
-                <input type="date" class="w-100" value="2024-03-22" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right" data-calendar="update">Gerar
-            Relatório</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="partners-report" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h6>Relatório</h6>
-        </div>
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-12">
-              <label class="material-label z-index-1">Tipo de Relatório</label>
-              <div class="form-group mb-4">
-                <select name="E-mail" class="custom-select">
-                  <option selected value="">Relatório de Renovações</option>
-                  <option value="1">Relatório de Bonificações</option>
-                  <option value="2">Relatório de Parceiros</option>
-                  <option value="3">Relatório de Suporte</option>
-                </select>
-              </div>
-            </div>
-            <!-- <div class="col-12">
-              <label class="material-label z-index-1">Parceiro</label>
-              <div class="form-group mb-4">
-                <select name="E-mail" class="custom-select">
-                  <option selected value="">Contábil Ramos</option>
-                  <option value="1">Inter Contábil</option>
-                  <option value="2">Martins Contabilidade</option>
-                  <option value="3">Santos & Silva</option>
-                </select>
-              </div>
-            </div> -->
-            <div class="col-lg-6">
-              <div class="form-group mb-4">
-                <label class="material-label z-index-1">Data Inicial</label>
-                <input type="date" class="w-100" value="2024-03-22" />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-group mb-4">
-                <label class="material-label z-index-1">Data Final</label>
-                <input type="date" class="w-100" value="2024-03-22" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right" data-calendar="update">Gerar
-            Relatório</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="support-report" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h6>Relatório</h6>
-        </div>
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-12">
-              <label class="material-label z-index-1">Tipo de Relatório</label>
-              <div class="form-group mb-4">
-                <select name="E-mail" class="custom-select">
-                  <option selected value="">Relatório de Renovações</option>
-                  <option value="1">Relatório de Bonificações</option>
-                  <option value="2">Relatório de Parceiros</option>
-                  <option value="3">Relatório de Suporte</option>
-                </select>
-              </div>
-            </div>
-            <!-- <div class="col-12">
-              <label class="material-label z-index-1">Parceiro</label>
-              <div class="form-group mb-4">
-                <select name="E-mail" class="custom-select">
-                  <option selected value="">Contábil Ramos</option>
-                  <option value="1">Inter Contábil</option>
-                  <option value="2">Martins Contabilidade</option>
-                  <option value="3">Santos & Silva</option>
-                </select>
-              </div>
-            </div> -->
-            <div class="col-lg-6">
-              <div class="form-group mb-4">
-                <label class="material-label z-index-1">Data Inicial</label>
-                <input type="date" class="w-100" value="2024-03-22" />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-group mb-4">
-                <label class="material-label z-index-1">Data Final</label>
-                <input type="date" class="w-100" value="2024-03-22" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-sm btn-link" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right" data-calendar="update">Gerar
-            Relatório</button>
+          <button type="button" class="btn btn-sm btn-primary rounded-pill float-right">
+            <span>Gerar Relatório</span>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </button>
         </div>
       </div>
     </div>
